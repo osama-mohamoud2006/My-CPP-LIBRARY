@@ -86,9 +86,14 @@ using namespace std;
 
 	 int sum_of_array(int Anyarr[100], int length) {
 		 int sum = 0; 
-		 for (int s = 0; s < length; s++)
+		 for (int s = 0; s < length; s++) {
 			 sum += Anyarr[s];
+		 }
 		 return sum;
+	 }
+
+	 double avg_of_array(int Anyarr[100], int length) {
+
 	 }
 
 }
