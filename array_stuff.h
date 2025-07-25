@@ -77,4 +77,18 @@ using namespace std;
 		 return min;
 	 }
 
+	 // is number that provided by user in array?
+	 bool is_number_in_array(int number, int Anyarr[100], int length) {
+		 for (int n = 0; n < length; n++)
+			 if (number == Anyarr[n]) return true;
+			 else return false;
+	 }
+
+	 int sum_of_array(int Anyarr[100], int length) {
+		 int sum = 0; 
+		 for (int s = 0; s < length; s++)
+			 sum += Anyarr[s];
+		 return sum;
+	 }
+
 }
