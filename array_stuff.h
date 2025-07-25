@@ -17,8 +17,8 @@ using namespace std;
 		 
 	 }
 	 //array ouput 
-	 void array_output(int arr[100], int length ) {
-		 cout << "\narray output: " << "[ ";
+	 void array_output(int arr[100], int length , string text ) {
+		 cout << "\n"<<text << "[ ";
 		 for (int o = 0; o < length; o++)
 		 {
 			 cout << arr[o] << " ";
@@ -27,4 +27,8 @@ using namespace std;
 	 }
 
 	 // fill array2
+	 void fill_array2(  int number,int Anyarr[100] , int &length2) {
+		 length2++;
+		 Anyarr[length2 - 1] = number;
+	 }
 }
