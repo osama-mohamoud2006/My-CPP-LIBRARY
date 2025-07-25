@@ -8,13 +8,15 @@ using namespace std;
  namespace arraystuff
 {
 	 // random generator
-
+	 int random(int from, int to) {
+		 return rand() % (to - from + 1) + from;
+	 }
 
 
 	 // you must define int length or whatever into your program and put this variable in length prarmeter 
 	
 	 // arrray input 
-	 void array_input(int Anyarr[100], int &length) {
+	 void array_input(int Anyarr[100], int length) {
 		
 		
 		 for (int i = 0; i < length; i++) {
@@ -49,7 +51,9 @@ using namespace std;
 		 Anyarr2[length2 - 1] = number;
 	 }
 
-	 //array filled whit random number
+	 //array filled with random number
+	 void array_filled_with_random_numbers(int to, int from, int Anyarr[100], string text, int length) {
 
+	 }
 
 }
