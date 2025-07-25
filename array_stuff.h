@@ -84,6 +84,7 @@ using namespace std;
 			 else return false;
 	 }
 
+	 // the sum of array elements 
 	 int sum_of_array(int Anyarr[100], int length) {
 		 int sum = 0; 
 		 for (int s = 0; s < length; s++) {
@@ -92,8 +93,11 @@ using namespace std;
 		 return sum;
 	 }
 
+	 // the avg of array elements 
 	 double avg_of_array(int Anyarr[100], int length) {
-
+		 return (float)sum_of_array(Anyarr, length) / length;
 	 }
+
+
 
 }
