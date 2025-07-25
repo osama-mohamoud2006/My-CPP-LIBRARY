@@ -52,8 +52,10 @@ using namespace std;
 	 }
 
 	 //array filled with random number
-	 void array_filled_with_random_numbers(int to, int from, int Anyarr[100], string text, int length) {
-
+	 void array_filled_with_random_numbers(int from, int to, int Anyarr[100], string text, int length) {
+		 for (int f = 0; f < length; f++) 
+			 Anyarr[f] = random(from, to);
+		 
 	 }
 
 }
