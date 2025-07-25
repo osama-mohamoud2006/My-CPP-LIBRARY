@@ -26,6 +26,8 @@ using namespace std;
 		 }
 		 
 	 }
+
+
 	 //array ouput 
 	 void array_output(int Anyarr[100], int length , string text ) {
 		 cout <<text << "[ ";
@@ -46,11 +48,14 @@ using namespace std;
 		 cout << " ]" << "\n";
 	 }
 
+
 	 // fill array2
 	 void fill_array2(  int number,int Anyarr2[100] , int &length2) {
 		 length2++;
 		 Anyarr2[length2 - 1] = number;
 	 }
+
+
 
 	 //array filled with random number
 	 // length is indicating the number of elements you want
