@@ -60,6 +60,7 @@ using namespace std;
 	 //array filled with random number
 	 // length is indicating the number of elements you want
 	 void array_filled_with_random_numbers(int from, int to, int Anyarr[100], string text, int length) {
+		 cout << text;
 		 for (int f = 0; f < length; f++) 
 			 Anyarr[f] = random(from, to);
 		 
