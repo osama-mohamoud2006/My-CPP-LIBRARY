@@ -1,10 +1,15 @@
 #pragma once
 
 #include<iostream>
+#include <ctime>
+#include<cstdlib>
 using namespace std;
 
  namespace arraystuff
 {
+	 // random generator
+
+
 
 	 // you must define int length or whatever into your program and put this variable in length prarmeter 
 	
@@ -43,6 +48,8 @@ using namespace std;
 		 length2++;
 		 Anyarr2[length2 - 1] = number;
 	 }
+
+	 //array filled whit random number
 
 
 }
