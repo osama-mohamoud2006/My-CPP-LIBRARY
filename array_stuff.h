@@ -9,7 +9,7 @@ using namespace std;
 {
 	
 	 // random generator
-	
+	// A'erady used in logic_stuff library 
 
 
 	 // you must define int length or whatever into your program and put this variable in length prarmeter 
