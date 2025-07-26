@@ -9,9 +9,7 @@ using namespace std;
 {
 	
 	 // random generator
-	 int random(int from, int to) {
-		 return rand() % (to - from + 1) + from;
-	 }
+	
 
 
 	 // you must define int length or whatever into your program and put this variable in length prarmeter 
@@ -61,9 +59,9 @@ using namespace std;
 	 // length is indicating the number of elements you want
 	 void array_filled_with_random_numbers(int from, int to, int Anyarr[100], string text, int length) {
 		 cout << text;
-		 for (int f = 0; f < length; f++) 
+		 for (int f = 0; f < length; f++) {
 			 Anyarr[f] = random(from, to);
-		 
+		 }
 	 }
  
 	 //get max number in array 
