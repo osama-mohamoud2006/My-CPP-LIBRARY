@@ -37,8 +37,21 @@ namespace inputs {
 		return number;
 	}
 
+	// read string 
 	string read_string(string message) {
-		cout
+		cout << message;
+		string str;
+		cin >> str;
+		return str;
+	}
+
+	// read full line
+	string read_full_line(string message) {
+		cout << message;
+		string full;
+
+		getline(cin, full);
+		return full;
 	}
 
 }
