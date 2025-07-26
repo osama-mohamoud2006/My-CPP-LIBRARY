@@ -7,6 +7,7 @@
 using namespace std;
 enum enCharType { smallLetter = 1, capitalLetter = 2, specialCharacter = 3, digit = 4 };
 enum enoperation { add = 1, sub = 2, divison = 3, mod = 4, multi = 5 };
+enum enScreen_color { black = 1, red = 2, yellow = 3, green = 4, red_on_black = 5, purple = 6 };
 namespace logic_stuff 
 {
 
@@ -86,7 +87,6 @@ namespace logic_stuff
 	}
 
 	// simple calaculator
-	
 	double calculator(double number1, double number2 , enoperation type) {
 		switch (type) {
 		case::enoperation::add:
@@ -114,6 +114,35 @@ namespace logic_stuff
 
 	// convert char to int
 	int char_to_int(char i) {
-		return i - '0';
+		int digit = i - '0';
+		return digit;
+	}
+
+	// count how many times number repeated
+	int count_digit_frequency(short DigitToCheck, int Number)
+	{
+		int FreqCount = 0, Remainder = 0;
+		while (Number > 0)
+		{
+			Remainder = Number % 10;
+			Number = Number / 10;
+
+			if (DigitToCheck == Remainder)
+			{
+				FreqCount++;
+			}
+		}
+		return FreqCount;
+	}
+
+	// change screen color
+	void screen_color(enScreen_color color) {
+		if (color == black) system("color 0F");//black
+		if (color == green) system("color 2F");//green
+		if (color == yellow) system("color 6F");//yellow
+		if (color == red) system("color 4F");//red
+		if (color == red_on_black) system("color 0C");//red on black
+		if (color == purple) system("color 0D");// purple text
+		
 	}
 }
