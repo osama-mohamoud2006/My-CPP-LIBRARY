@@ -83,9 +83,10 @@ using namespace std;
 
 	 // is number that provided by user in array?
 	 bool is_number_in_array(int number, int Anyarr[100], int length) {
-		 for (int n = 0; n < length; n++)
+		 for (int n = 0; n < length; n++) {
 			 if (number == Anyarr[n]) return true;
-			 else return false;
+		 }
+			  return false;
 	 }
 
 	 // the sum of array elements 

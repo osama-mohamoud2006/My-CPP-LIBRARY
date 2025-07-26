@@ -69,6 +69,7 @@ namespace AllStuff
 			return char(random(48, 57));
 			break;
 		}
+		default:return 0;
 		}
 	}
 
@@ -85,6 +86,22 @@ namespace AllStuff
 
 		return Number2;
 	}
+
+
+// reverse string 
+       string reverse_word(string yourword ){
+		string reversed ="";
+		for(int i=yourword.length()-1 ; i>=0; i++)
+		{
+
+			reversed+=yourword[i];
+	
+		}
+                return reversed;
+
+	   }
+
+
 
 	// simple calaculator
 	double calculator(double number1, double number2 , enoperation type) {
