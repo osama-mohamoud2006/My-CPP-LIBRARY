@@ -9,7 +9,13 @@ namespace inputs {
 		do {
 			cout << text;
 			cin >> n;
+			if (0>n) {
+				cout << "\nplease enter correct number which in range you assigned!\n";
+				cout << "\a";
+				system("color 4F"); // red if number isn't in range 
+			}
 		} while (0 > n);
+		system("color 0F"); //rest screen color 
 		return n;
 	}
 	 
@@ -19,7 +25,13 @@ namespace inputs {
 		do{
 			cout << text;
 			cin >> number;
+			if (from > number || number > to) {
+				cout << "\nplease enter correct number which in range you assigned!\n";
+				cout << "\a";
+				system("color 4F"); // red if number isn't in range 
+			}
 		} while (from > number || number > to);
+		system("color 0F"); //rest screen color 
 		return number;
 	}
 
