@@ -5,6 +5,8 @@
 #include <ctime>
 #include <cstdlib>
 using namespace std;
+enum enCharType { smallLetter = 1, capitalLetter = 2, specialCharacter = 3, digit = 4 };
+enum enoperation { add = 1, sub = 2, divison = 3, mod = 4, multi = 5 };
 namespace logic_stuff 
 {
 
@@ -41,7 +43,7 @@ namespace logic_stuff
 	}
 
 	// generate random values according to enum 
-	enum enCharType { smallLetter = 1, capitalLetter = 2, specialCharacter = 3, digit = 4 };
+	
 	char get_random_stuff(enCharType CharType)
 	{
 		switch (CharType)
@@ -84,18 +86,18 @@ namespace logic_stuff
 	}
 
 	// simple calaculator
-	enum enoperation {add=1 , sub=2 , div=3 , mod=4 , multi=5};
+	
 	double calculator(double number1, double number2 , enoperation type) {
 		switch (type) {
-		case::add:
+		case::enoperation::add:
 			return number1 + number2;
 
 		case::enoperation::sub:
 			 return  number1 - number2;
 
-		case enoperation::div:
+		case enoperation::divison:
 			if (number2 == 0) return number1;
-			else number1 / number2;
+			else return  number1 / number2;
 
 		case enoperation::mod:
 			if (number1 > 0.0 || number2 > 0.0) return fmod(number1, number2);
@@ -104,11 +106,14 @@ namespace logic_stuff
 		case enoperation::multi:
 			return number1 * number2;
 
-			default:return 0;
+			default:
+				return 0;
 
 		}
 	}
 
 	// convert char to int
-
+	int char_to_int(char i) {
+		return i - '0';
+	}
 }
