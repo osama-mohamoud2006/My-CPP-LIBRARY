@@ -89,7 +89,23 @@ namespace logic_stuff
 		switch (type) {
 		case::add:
 			return number1 + number2;
-			case::
+
+		case::enoperation::sub:
+			 return  number1 - number2;
+
+		case enoperation::div:
+			if (number2 == 0) return number1;
+			else number1 / number2;
+
+		case enoperation::mod:
+			if (number1 > 0.0 || number2 > 0.0) return fmod(number1, number2);
+			else  return (int)number1% (int)number2;
+
+		case enoperation::multi:
+			return number1 * number2;
+
+			default:return 0;
+
 		}
 	}
 
