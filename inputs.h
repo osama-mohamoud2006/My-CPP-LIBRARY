@@ -22,7 +22,7 @@ namespace inputs {
 	}
 	 
 	// enter nunmber in range
-	double enter_number_from_to(int from,int to,string text) {
+	double enter_number_from_to(double from,double to,string text) {
 		double number=0;
 		do{
 			cout << text;
