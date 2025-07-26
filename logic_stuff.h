@@ -148,6 +148,7 @@ namespace logic_stuff
 
 	// check if it is digit or number
 	bool is_it_number(char i) {
-		if (isdigit(i)) return true; // it is
+		if (isdigit(i)) return true; // it is number
+		else return false; // it is char
 	}
 }
