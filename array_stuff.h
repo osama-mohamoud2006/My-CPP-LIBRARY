@@ -5,7 +5,7 @@
 #include<cstdlib>
 using namespace std;
 
- namespace arraystuff
+ namespace AllStuff
 {
 	
 	 // random generator

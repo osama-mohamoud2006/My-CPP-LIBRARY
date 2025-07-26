@@ -3,7 +3,7 @@
 #include <string>
 #include <Bits.h>
 using namespace std;
-namespace inputs {
+namespace AllStuff {
 
 	// enter postive number
 	double enter_postive_number(string text) {
