@@ -8,7 +8,7 @@ using namespace std;
 enum enCharType { smallLetter = 1, capitalLetter = 2, specialCharacter = 3, digit = 4 };
 enum enoperation { add = 1, sub = 2, divison = 3, mod = 4, multi = 5 };
 enum enScreen_color { black = 1, red = 2, yellow = 3, green = 4, red_on_black = 5, purple = 6 };
-namespace logic_stuff 
+namespace AllStuff
 {
 
 	// check it is prime or not 
