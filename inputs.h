@@ -5,6 +5,14 @@
 using namespace std;
 namespace AllStuff {
 
+	// enter normal number 
+	double enter_number(string message){
+        cout<<message;
+		double number;
+         cin>>number;
+		 return number;
+	}
+	
 	// enter postive number
 	double enter_postive_number(string text) {
 		double n=0; 
@@ -45,6 +53,7 @@ namespace AllStuff {
 		return str;
 	}
 
+	
 	// read full line
 	string read_full_line(string message) {
 		cout << message;
