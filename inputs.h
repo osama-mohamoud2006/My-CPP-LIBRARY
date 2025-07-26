@@ -1,11 +1,13 @@
 #pragma once
 #include <iostream>
+#include <string>
+#include <Bits.h>
 using namespace std;
 namespace inputs {
 
 	// enter postive number
-	int enter_postive_number(string text) {
-		int n=0; 
+	double enter_postive_number(string text) {
+		double n=0; 
 		do {
 			cout << text;
 			cin >> n;
@@ -20,8 +22,8 @@ namespace inputs {
 	}
 	 
 	// enter nunmber in range
-	int enter_number_from_to(int from,int to,string text) {
-		int number=0;
+	double enter_number_from_to(int from,int to,string text) {
+		double number=0;
 		do{
 			cout << text;
 			cin >> number;
@@ -33,6 +35,10 @@ namespace inputs {
 		} while (from > number || number > to);
 		system("color 0F"); //rest screen color 
 		return number;
+	}
+
+	string read_string(string message) {
+		cout
 	}
 
 }
