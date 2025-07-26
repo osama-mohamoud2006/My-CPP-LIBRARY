@@ -39,7 +39,7 @@ namespace logic_stuff
 
 	
 	// generate random number {
-	double random(int to, int from) {
+	int random(int to, int from) {
 		return rand() %(to - from + 1) + from;
 	}
 
@@ -144,5 +144,10 @@ namespace logic_stuff
 		if (color == red_on_black) system("color 0C");//red on black
 		if (color == purple) system("color 0D");// purple text
 		
+	}
+
+	// check if it is digit or number
+	bool is_it_number(char i) {
+		if (isdigit(i)) return true; // it is
 	}
 }
