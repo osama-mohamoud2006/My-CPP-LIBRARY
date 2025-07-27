@@ -25,10 +25,10 @@ namespace AllStuff {
 	
 	// enter postive number
 	double enter_postive_number(string text) {
+		bool vaild = false ; 
 		double n=0; 
-		cout << text;
-		
 		do {
+			cout << text;
 			cin >> n;
 			if(cin.fail()){
                 cin.clear(); // to reuse cin>>
@@ -40,27 +40,44 @@ namespace AllStuff {
 			else if (0>=n  ) {
 				cout << "\a";
 				system("color 4F"); // red if number isn't in range 
-				cout << "\nplease enter postive number: ";
+				cout << "\nplease enter postive number!\n ";
 				
 			}
+            
+			else{
+				vaild = true ; 
+			}
 
-		} while (0 > n || cin.fail());
+		} while (vaild == false );
 		system("color 0F"); //rest screen color 
 		return n;
 	}
 	 
 	// enter nunmber in range
 	double enter_number_from_to(double from,double to,string text) {
+		bool is_ok= false;
 		double number=0;
 		do{
 			cout << text;
 			cin >> number;
-			if (from > number || number > to) {
-				cout << "\nplease enter correct number which in range you assigned!\n";
+			if(cin.fail()){
+               cin.clear();
+			   cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+			   cout << "\a";
+				system("color 4F"); // red if number isn't in range 
+			   cout << "\nplease enter correct number which in range you assigned!\n";
+				
+			}
+			else if (from > number || number > to) {
 				cout << "\a";
 				system("color 4F"); // red if number isn't in range 
+				cout << "\nplease enter correct number which in range you assigned!\n";
 			}
-		} while (from > number || number > to);
+
+			else {
+				is_ok = true ; 
+			}
+		} while (is_ok==false);
 		system("color 0F"); //rest screen color 
 		return number;
 	}
