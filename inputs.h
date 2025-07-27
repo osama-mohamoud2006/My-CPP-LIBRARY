@@ -58,7 +58,8 @@ namespace AllStuff {
 		bool is_ok= false;
 		double number=0;
 		do{
-			cout << text;
+			  
+			cout << text<< " (" << from << " to " << to << "): ";
 			cin >> number;
 			if(cin.fail()){
                cin.clear();
