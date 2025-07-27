@@ -26,19 +26,24 @@ namespace AllStuff {
 	// enter postive number
 	double enter_postive_number(string text) {
 		double n=0; 
+		cout << text;
+		
 		do {
-			cout << text;
 			cin >> n;
-			if (0>n || cin.fail() ) {
-				cin.clear(); // to reuse cin>>
+			if(cin.fail()){
+                cin.clear(); // to reuse cin>>
 				cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
 				cout << "\a";
 				system("color 4F"); // red if number isn't in range 
+			}
 
-				cout << "\nplease enter correct number which in range you assigned!: ";
-				cin>>n;
+			else if (0>=n  ) {
+				cout << "\a";
+				system("color 4F"); // red if number isn't in range 
+				cout << "\nplease enter postive number: ";
 				
 			}
+
 		} while (0 > n || cin.fail());
 		system("color 0F"); //rest screen color 
 		return n;
