@@ -30,12 +30,16 @@ namespace AllStuff {
 			cout << text;
 			cin >> n;
 			if (0>n || cin.fail() ) {
-				cin.clear(); // ro reuse
-				cout << "\nplease enter correct number which in range you assigned!\n";
+				cin.clear(); // to reuse cin>>
+				cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
 				cout << "\a";
 				system("color 4F"); // red if number isn't in range 
+
+				cout << "\nplease enter correct number which in range you assigned!: ";
+				cin>>n;
+				
 			}
-		} while (0 > n);
+		} while (0 > n || cin.fail());
 		system("color 0F"); //rest screen color 
 		return n;
 	}
