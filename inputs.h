@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
+#include <limits>
 #include <string>
-#include <Bits.h>
+
 using namespace std;
 namespace AllStuff {
 
@@ -10,6 +11,15 @@ namespace AllStuff {
         cout<<message;
 		double number;
          cin>>number;
+		 while(cin.fail()){
+			cin.clear(); // to claer cin>> to reuse it 
+             cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+			 cout << '\a';
+           system("color 4f"); //red console screen 
+		   cout<<"\n\nplease enter correct number!: ";
+		   cin>>number;
+		 }
+		  system("color 0F"); // rest the screen to original color 
 		 return number;
 	}
 	
@@ -19,7 +29,8 @@ namespace AllStuff {
 		do {
 			cout << text;
 			cin >> n;
-			if (0>n) {
+			if (0>n || cin.fail() ) {
+				cin.clear(); // ro reuse
 				cout << "\nplease enter correct number which in range you assigned!\n";
 				cout << "\a";
 				system("color 4F"); // red if number isn't in range 

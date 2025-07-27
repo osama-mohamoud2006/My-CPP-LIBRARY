@@ -88,10 +88,10 @@ namespace AllStuff
 	}
 
 
-// reverse string 
+       // reverse string 
        string reverse_word(string yourword ){
 		string reversed ="";
-		for(int i=yourword.length()-1 ; i>=0; i++)
+		for(int i=yourword.length()-1 ; i>=0; i--)
 		{
 
 			reversed+=yourword[i];
