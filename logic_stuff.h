@@ -48,7 +48,7 @@ namespace AllStuff
 		return rand() %(to - from + 1) + from;
 	}
 
-	
+
 	// generate random values according to enum 
    char get_random_stuff(enCharType CharType)
    {
@@ -56,32 +56,18 @@ namespace AllStuff
     switch (CharType)
     {
     case enCharType::smallLetter:
-    {
-        // Generate a random lowercase letter (ASCII codes 97 to 122).
-        return char(random(97, 122));
-        break;  // break is not strictly needed after a return.
-    }
+        return char(random(97, 123)); 
     case enCharType::capitalLetter:
-    {
-        // Generate a random uppercase letter (ASCII codes 65 to 90).
-        return char(random(65, 90));
-        break;
-    }
+        return char(random(65, 91));  
     case enCharType::specialCharacter:
-    {
-        // Generate a random special character (ASCII codes 33 to 47).
-        return char(random(33, 47));
-        break;
-    }
+        return char(random(33, 48));  
     case enCharType::digit:
-    {
-        // Generate a random digit (ASCII codes 48 to 57).
-        return char(random(48, 57));
-        break;
+        return char(random(48, 58));  
+    default:
+        return '\0'; 
     }
-    }
-    // If an invalid type is passed, return a null character.
-    return '\0';
+    
+    
 }
 
 

@@ -34,7 +34,14 @@ using namespace std;
 		 }
 		 
 	 }
-
+        //for char 
+	  void array_input(char Anyarr[100], int length){
+		 for (int i = 0; i < length; i++) {
+			 cout << "enter array element " << i + 1 << " index:" << "[" << i << "]" << " ";
+			 cin >> Anyarr[i];
+		 }
+		 
+	 }
 	 
 
 	 //array ouput 
@@ -115,6 +122,12 @@ using namespace std;
 	  void fill_array2( string word , string Anyarr2[100] , int &length2) {
 		 length2++;
 		 Anyarr2[length2 - 1] = word;
+	 }
+           
+		//for char
+	  void fill_array2( char c , char Anyarr2[100] , int &length2) {
+		 length2++;
+		 Anyarr2[length2 - 1] = c;
 	 }
 
 
