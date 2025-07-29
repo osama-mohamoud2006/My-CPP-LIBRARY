@@ -5,7 +5,12 @@
 #include <ctime>
 #include <cstdlib>
 using namespace std;
-enum enCharType { smallLetter = 1, capitalLetter = 2, specialCharacter = 3, digit = 4 };
+enum enCharType { 
+    smallLetter = 1,    // Represents lowercase letters (ASCII 97 to 122).
+    capitalLetter = 2,   // Represents uppercase letters (ASCII 65 to 90).
+    specialCharacter = 3,// Represents special characters (ASCII 33 to 47).
+    digit = 4            // Represents digits (ASCII 48 to 57).
+};
 enum enoperation { add = 1, sub = 2, divison = 3, mod = 4, multi = 5 };
 enum enScreen_color { black = 1, red = 2, yellow = 3, green = 4, red_on_black = 5, purple = 6 };
 namespace AllStuff
@@ -43,60 +48,32 @@ namespace AllStuff
 		return rand() %(to - from + 1) + from;
 	}
 
-	// generate random values according to enum 
 	
-	char get_random_stuff(enCharType CharType)
-	{
-		switch (CharType)
-		{
-		case enCharType::smallLetter:
-		{
-			return char(random(97, 122));
-			break;
-		}
-		case enCharType::capitalLetter:
-		{
-			return char(random(65, 90));
-			break;
-		}
-		case enCharType::specialCharacter:
-		{
-			return char(random(33, 47));
-			break;
-		}
-		case enCharType::digit:
-		{
-			return char(random(48, 57));
-			break;
-		}
-		default:return 0;
-		}
-	}
-
-   char GetRandomCharacter(enCharType CharType)
-{
+	// generate random values according to enum 
+   char get_random_stuff(enCharType CharType)
+   {
     // Use a switch-case to handle the different character types.
     switch (CharType)
     {
-    case enCharType::SamallLetter:
+    case enCharType::smallLetter:
     {
         // Generate a random lowercase letter (ASCII codes 97 to 122).
         return char(random(97, 122));
         break;  // break is not strictly needed after a return.
     }
-    case enCharType::CapitalLetter:
+    case enCharType::capitalLetter:
     {
         // Generate a random uppercase letter (ASCII codes 65 to 90).
         return char(random(65, 90));
         break;
     }
-    case enCharType::SpecialCharacter:
+    case enCharType::specialCharacter:
     {
         // Generate a random special character (ASCII codes 33 to 47).
         return char(random(33, 47));
         break;
     }
-    case enCharType::Digit:
+    case enCharType::digit:
     {
         // Generate a random digit (ASCII codes 48 to 57).
         return char(random(48, 57));
