@@ -129,7 +129,7 @@ The goal is to avoid rewriting the same code over and over, and to keep things m
 ## Library’s new functions:
 
 * `array_input(string Anyarr[100], int length)`
-  To input string array elements from user.
+  c
 
 * `array_input(char Anyarr[100], int length)`
   To input char array elements from user.
