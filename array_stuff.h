@@ -44,7 +44,7 @@ using namespace std;
 	 }
 	 
 
-	 //array ouput 
+	 //array ouput ////////////////////////////////////////////////////////////////////////////////////////////////
 
 	 // for int
 	 void array_output(int Anyarr[100], int length , string text ) {
@@ -77,7 +77,7 @@ using namespace std;
   }   
 
 
-	 //reverse array output
+	 //reverse array output////////////////////////////////////////////////////////////////////////////////////////////////
 
 	 //for int 
 	 void array_output_reverse(int Anyarr[100], int length ,  string text) {
@@ -109,7 +109,7 @@ using namespace std;
 	 }
   
 
-	 // fill array2
+	 // fill array2////////////////////////////////////////////////////////////////////////////////////////////////////////
 	 // oveloaded function 
 
 	 // for int
@@ -131,7 +131,7 @@ using namespace std;
 	 }
 
 
-	 //array filled with random number
+	 //array filled with random number/////////////////////////////////////////////////////////////////////////////////////////
 	 // length is indicating the number of elements you want
 
 	 //fill with random numbers
@@ -141,16 +141,8 @@ using namespace std;
 			 Anyarr[f] = random(from, to);
 		 }
 	 }
- 
-	 //fill with random string 
-     void array_filled_with_random(int from, int to, string Anyarr[100], int length) {
-		
-		 for (int f = 0; f < length; f++) {
-			 Anyarr[f] = to_string(random(from, to));
-		 }
-	 }
 
-	     // fill array with random stuff according to the type you want
+	 // fill array with random stuff according to the type you want
        void array_filled_with_random( enCharType type ,string Anyarr[100], int length) {
 		 
 		 for (int f = 0; f < length; f++) {
@@ -158,14 +150,14 @@ using namespace std;
 		 }
 	 }
 
-     void array_filled_with_random( enCharType type ,char Anyarr[100], int length) {
+      void array_filled_with_random( enCharType type ,char Anyarr[100], int length) {
 		 
 		 for (int f = 0; f < length; f++) {
 			 Anyarr[f] = get_random_stuff(type);
 		 }
 	 }
 
-    // generate random word 
+    // generate random word ////////////////////////////////////////////////////////////////////////////////////////////
     string generate_random_word(enCharType CharType, short Length){
      
     string Word;  // Initialize an empty string to build the word.
@@ -181,7 +173,7 @@ using namespace std;
          
      
 
-	 //get max number in array 
+	 //get max number in array ////////////////////////////////////////////////////////////////////////////////////////////
 	 int max_number_in_array(int Anyarr[100], int length) {
 		 int max = Anyarr[0];
 		 for (int m = 0; m < length; m++)
@@ -196,7 +188,7 @@ using namespace std;
 		 return max;
 	  }
 
-	 // get min number in array
+	 // get min number in array//////////////////////////////////////////////////////////////////////
 	 int min_number_in_array(int Anyarr[100], int length) {
 		 int min = Anyarr[0];
 		 for (int m = 0; m < length; m++)
@@ -212,7 +204,7 @@ using namespace std;
 		 return min;
 	}
 
-	 // is number that provided by user in array?
+	 // is number that provided by user in array?////////////////////////////////////////////////////////
 	 bool is_number_in_array(int number, int Anyarr[100], int length) {
 		 for (int n = 0; n < length; n++) {
 			 if (number == Anyarr[n]) return true;
