@@ -80,12 +80,16 @@ using namespace std;
 
 
 	 // fill array2
+	 // oveloaded function 
+
+	 // for int
 	 void fill_array2(  int number,int Anyarr2[100] , int &length2) {
 		 length2++;
 		 Anyarr2[length2 - 1] = number;
 	 }
        
-	  void fill_array2(  string word,int Anyarr2[100] , int &length2) {
+	 //for string 
+	  void fill_array2( string word , string Anyarr2[100] , int &length2) {
 		 length2++;
 		 Anyarr2[length2 - 1] = word;
 	 }
