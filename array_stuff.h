@@ -121,8 +121,8 @@ using namespace std;
 	 }
 
 	     // fill array with random stuff according to the type you want
-       void array_filled_with_random( enCharType type ,string Anyarr[100], string text, int length) {
-		 cout << text;
+       void array_filled_with_random( enCharType type ,string Anyarr[100], int length) {
+		 
 		 for (int f = 0; f < length; f++) {
 			 Anyarr[f] = get_random_stuff(type);
 		 }

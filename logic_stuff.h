@@ -73,6 +73,46 @@ namespace AllStuff
 		}
 	}
 
+   char GetRandomCharacter(enCharType CharType)
+{
+    // Use a switch-case to handle the different character types.
+    switch (CharType)
+    {
+    case enCharType::SamallLetter:
+    {
+        // Generate a random lowercase letter (ASCII codes 97 to 122).
+        return char(random(97, 122));
+        break;  // break is not strictly needed after a return.
+    }
+    case enCharType::CapitalLetter:
+    {
+        // Generate a random uppercase letter (ASCII codes 65 to 90).
+        return char(random(65, 90));
+        break;
+    }
+    case enCharType::SpecialCharacter:
+    {
+        // Generate a random special character (ASCII codes 33 to 47).
+        return char(random(33, 47));
+        break;
+    }
+    case enCharType::Digit:
+    {
+        // Generate a random digit (ASCII codes 48 to 57).
+        return char(random(48, 57));
+        break;
+    }
+    }
+    // If an invalid type is passed, return a null character.
+    return '\0';
+}
+
+
+
+
+
+
+
 	// reverse number
 	int reversed_number(int Number) {
 		int Remainder = 0;
