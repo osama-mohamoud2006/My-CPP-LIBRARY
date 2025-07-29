@@ -58,13 +58,22 @@ using namespace std;
 		 }
 		 cout << " ]" << "\n";
 	 }
-
+      
+	    /// for char 
+	    void array_output(char Anyarr[100], int length , string text ){
+		 cout <<text << "[ ";
+		 for (int o = 0; o < length; o++)
+		 {
+			 cout << Anyarr[o] << " ";
+		 }
+		 cout << " ]" << "\n";
+  }   
 
 
 	 //reverse array output
 
 	 //for int 
-	 void array_output_reverse(string Anyarr[100], int length ,  string text) {
+	 void array_output_reverse(int Anyarr[100], int length ,  string text) {
 		 cout << text << "[ ";
 		 for (int o = length-1; o >=0; o--)
 		 {
@@ -74,7 +83,7 @@ using namespace std;
 	 }
 
 	 // for string 
-	  void array_output_reverse(int Anyarr[100], int length ,  string text) {
+	  void array_output_reverse(string Anyarr[100], int length ,  string text) {
 		 cout << text << "[ ";
 		 for (int o = length-1; o >=0; o--)
 		 {
@@ -82,8 +91,16 @@ using namespace std;
 		 }
 		 cout << " ]" << "\n";
 	 }
-
-
+         //for char    
+	 void array_output_reverse(char Anyarr[100], int length ,  string text) {
+		 cout << text << "[ ";
+		 for (int o = length-1; o >=0; o--)
+		 {
+			 cout << Anyarr[o] << " ";
+		 }
+		 cout << " ]" << "\n";
+	 }
+  
 
 	 // fill array2
 	 // oveloaded function 
@@ -121,7 +138,7 @@ using namespace std;
 	 }
 
 	     // fill array with random stuff according to the type you want
-       void array_filled_with_random( enCharType type ,string Anyarr[100], int length) {
+       void array_filled_with_random( enCharType type ,char Anyarr[100], int length) {
 		 
 		 for (int f = 0; f < length; f++) {
 			 Anyarr[f] = get_random_stuff(type);
