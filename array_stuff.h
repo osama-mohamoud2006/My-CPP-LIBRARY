@@ -12,11 +12,13 @@ using namespace std;
 	
 	 // random generator
 	// Alerady used in logic_stuff library 
-
-
 	 // you must define int length or whatever into your program and put this variable in length prarmeter 
 	
-	 // arrray input for int (oveloading functions)
+
+
+	 // arrray input (oveloading functions)
+
+	 //for int 
 	 void array_input(int Anyarr[100], int length) {
 		 for (int i = 0; i < length; i++) {
 			 cout << "enter array element " << i + 1 << " index:" << "[" << i << "]" << " ";
@@ -24,6 +26,7 @@ using namespace std;
 		 }
 		 
 	 }
+	 //for string 
 	 void array_input(string Anyarr[100], int length) {
 		 for (int i = 0; i < length; i++) {
 			 cout << "enter array element " << i + 1 << " index:" << "[" << i << "]" << " ";
@@ -59,6 +62,8 @@ using namespace std;
 
 
 	 //reverse array output
+
+	 //for int 
 	 void array_output_reverse(string Anyarr[100], int length ,  string text) {
 		 cout << text << "[ ";
 		 for (int o = length-1; o >=0; o--)
@@ -68,6 +73,7 @@ using namespace std;
 		 cout << " ]" << "\n";
 	 }
 
+	 // for string 
 	  void array_output_reverse(int Anyarr[100], int length ,  string text) {
 		 cout << text << "[ ";
 		 for (int o = length-1; o >=0; o--)
@@ -97,6 +103,8 @@ using namespace std;
 
 	 //array filled with random number
 	 // length is indicating the number of elements you want
+
+	 //fill with random numbers
 	 void array_filled_with_random_numbers(int from, int to, int Anyarr[100], string text, int length) {
 		 cout << text;
 		 for (int f = 0; f < length; f++) {
@@ -104,6 +112,27 @@ using namespace std;
 		 }
 	 }
  
+	 //fill with random string 
+     void array_filled_with_random_numbers(int from, int to, string Anyarr[100], string text, int length) {
+		 cout << text;
+		 for (int f = 0; f < length; f++) {
+			 Anyarr[f] = random(from, to);
+		 }
+	 }
+
+	     // fill array with random stuff according to the type you want
+       void array_filled_with_random_numbers( enCharType type ,string Anyarr[100], string text, int length) {
+		 cout << text;
+		 for (int f = 0; f < length; f++) {
+			 Anyarr[f] = get_random_stuff(type);
+		 }
+	 }
+
+    
+
+
+
+
 	 //get max number in array 
 	 int max_number_in_array(int Anyarr[100], int length) {
 		 int max = Anyarr[0];
