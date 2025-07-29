@@ -216,6 +216,14 @@ using namespace std;
 		 }
 		 return sum;
 	 }
+     //float type 
+	  float sum_of_array(float Anyarr[100], int length) {
+		 float sum = 0; 
+		 for (int s = 0; s < length; s++) {
+			 sum += Anyarr[s];
+		 }
+		 return sum;
+	 }
 
 	 // the avg of array elements 
 	 double avg_of_array(int Anyarr[100], int length) {
