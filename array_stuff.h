@@ -9,13 +9,24 @@ using namespace std;
 {
 	
 	 // random generator
-	// A'erady used in logic_stuff library 
+	// Alerady used in logic_stuff library 
 
 
 	 // you must define int length or whatever into your program and put this variable in length prarmeter 
 	
-	 // arrray input 
+	 // arrray input for int (oveloading functions)
 	 void array_input(int Anyarr[100], int length) {
+		
+		
+		 for (int i = 0; i < length; i++) {
+			 cout << "enter array element " << i + 1 << " index:" << "[" << i << "]" << " ";
+			 cin >> Anyarr[i];
+		 }
+		 
+	 }
+
+      
+	 void array_input(string Anyarr[100], int length) {
 		
 		
 		 for (int i = 0; i < length; i++) {
@@ -27,6 +38,7 @@ using namespace std;
 
 
 	 //array ouput 
+	 // for int
 	 void array_output(int Anyarr[100], int length , string text ) {
 		 cout <<text << "[ ";
 		 for (int o = 0; o < length; o++)
@@ -35,6 +47,17 @@ using namespace std;
 		 }
 		 cout << " ]" << "\n";
 	 }
+
+ void array_output(int Anyarr[100], int length , string text ) {
+		 cout <<text << "[ ";
+		 for (int o = 0; o < length; o++)
+		 {
+			 cout << Anyarr[o] << " ";
+		 }
+		 cout << " ]" << "\n";
+	 }
+
+
 
 	 //reverse array output
 	 void array_output_reverse(int Anyarr[100], int length ,  string text) {
