@@ -134,7 +134,7 @@ using namespace std;
 	 //array filled with random number/////////////////////////////////////////////////////////////////////////////////////////
 	 // length is indicating the number of elements you want
 
-	 //fill with random numbers
+	 //fill with random numbers////////////////////////////////////////////////////////////////////////////////
 	 void array_filled_with_random(int from, int to, int Anyarr[100],  int length) {
 		 
 		 for (int f = 0; f < length; f++) {
@@ -142,20 +142,21 @@ using namespace std;
 		 }
 	 }
 
-	 // fill array with random stuff according to the type you want
-       void array_filled_with_random( enCharType type ,string Anyarr[100], int length) {
-		 
-		 for (int f = 0; f < length; f++) {
-			 Anyarr[f] = get_random_stuff(type);
-		 }
-	 }
-
+	 // fill array with random stuff according to the type you want///////////////////////////////////////
       void array_filled_with_random( enCharType type ,char Anyarr[100], int length) {
 		 
 		 for (int f = 0; f < length; f++) {
 			 Anyarr[f] = get_random_stuff(type);
 		 }
 	 }
+           
+	   void array_filled_with_random( enCharType type ,string Anyarr[100], int length) {
+		 
+		 for (int f = 0; f < length; f++) {
+			 Anyarr[f] = get_random_stuff(type);
+		 }
+	 }
+
 
     // generate random word ////////////////////////////////////////////////////////////////////////////////////////////
     string generate_random_word(enCharType CharType, short Length){

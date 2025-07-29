@@ -18,8 +18,8 @@ namespace AllStuff
 
 	// check it is prime or not 
 	bool even_or_odd(int number) {
-		if (number % 2 == 0) return true;
-		else return false;
+		if (number % 2 == 0) ? return true:return false ;
+		
 	}
 
 	// check even only 
