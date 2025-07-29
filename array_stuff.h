@@ -51,9 +51,9 @@ using namespace std;
         //for string	 
      void array_output(string Anyarr[100], int length , string text ) {
 		 cout <<text << "[ ";
-		 for (string o :Anyarr)
+		 for (int o = 0; o < length; o++)
 		 {
-			 cout << o << " ";
+			 cout << Anyarr[o] << " ";
 		 }
 		 cout << " ]" << "\n";
 	 }
@@ -61,7 +61,16 @@ using namespace std;
 
 
 	 //reverse array output
-	 void array_output_reverse(int Anyarr[100], int length ,  string text) {
+	 void array_output_reverse(string Anyarr[100], int length ,  string text) {
+		 cout << text << "[ ";
+		 for (int o = length-1; o >=0; o--)
+		 {
+			 cout << Anyarr[o] << " ";
+		 }
+		 cout << " ]" << "\n";
+	 }
+
+	  void array_output_reverse(int Anyarr[100], int length ,  string text) {
 		 cout << text << "[ ";
 		 for (int o = length-1; o >=0; o--)
 		 {
@@ -71,6 +80,7 @@ using namespace std;
 	 }
 
 
+	 
 	 // fill array2
 	 void fill_array2(  int number,int Anyarr2[100] , int &length2) {
 		 length2++;
