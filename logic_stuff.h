@@ -77,10 +77,6 @@ namespace AllStuff
 
 
 
-
-
-
-
 	// reverse number
 	int reversed_number(int Number) {
 		int Remainder = 0;
@@ -173,7 +169,11 @@ namespace AllStuff
 
 	// check if it is digit or number
 	bool is_it_number(char i) {
-		if (isdigit(i)) return true; // it is number
-		else return false; // it is char
+		bool res ;
+		(isdigit(i)) ? res= true :res =false ; // it is number
+		//  return false; // it is char
+		return res;
 	}
+
+	
 }

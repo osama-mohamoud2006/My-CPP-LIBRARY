@@ -1,3 +1,4 @@
+
 # 📚 My C++ Utility Library
 
 This is a small personal C++ library I built to collect the things I use a lot in my projects, including:
@@ -124,3 +125,46 @@ The goal is to avoid rewriting the same code over and over, and to keep things m
 
 * `avg_of_array(int Anyarr[100], int length)`
   Return the average of array elements.
+
+## Library’s new functions:
+
+* `array_input(string Anyarr[100], int length)`
+  To input string array elements from user.
+
+* `array_input(char Anyarr[100], int length)`
+  To input char array elements from user.
+
+* `array_output(char Anyarr[100], int length , string text)`
+  To output char array elements with custom text.
+
+* `array_output_reverse(string Anyarr[100], int length , string text)`
+  To reverse the output of string array elements.
+
+* `array_output_reverse(char Anyarr[100], int length , string text)`
+  To reverse the output of char array elements.
+
+* `fill_array2(string word , string Anyarr2[100] , int &length2)`
+  Fill another string array with a word, and increment length2.
+
+* `fill_array2(char c , char Anyarr2[100] , int &length2)`
+  Fill another char array with a character, and increment length2.
+
+* `array_filled_with_random(enCharType type ,char Anyarr[100], int length)`
+  Fill char array with random characters based on enum `enCharType`.
+
+* `array_filled_with_random(enCharType type ,string Anyarr[100], int length)`
+  Fill string array with random characters based on enum `enCharType`.
+
+* `generate_random_word(enCharType CharType, short Length)`
+  Generate a random word of specific length based on enum `enCharType`.
+
+* `max_number_in_array(float Anyarr[100], int length)`
+  Return the maximum number in float array.
+
+* `min_number_in_array(float Anyarr[100], int length)`
+  Return the minimum number in float array.
+
+* `sum_of_array(float Anyarr[100], int length)`
+  Return the sum of float array elements.
+
+
