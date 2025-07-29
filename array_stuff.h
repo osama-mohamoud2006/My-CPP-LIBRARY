@@ -3,6 +3,8 @@
 #include<iostream>
 #include <ctime>
 #include<cstdlib>
+#include"E:\projects\my library\AllStuff.h"  
+using namespace AllStuff;
 using namespace std;
 
  namespace AllStuff
@@ -80,7 +82,7 @@ using namespace std;
 	 }
 
 
-	 
+
 	 // fill array2
 	 void fill_array2(  int number,int Anyarr2[100] , int &length2) {
 		 length2++;
