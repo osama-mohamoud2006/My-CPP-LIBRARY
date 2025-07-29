@@ -48,11 +48,12 @@ using namespace std;
 		 cout << " ]" << "\n";
 	 }
 
- void array_output(int Anyarr[100], int length , string text ) {
+        //for string	 
+     void array_output(string Anyarr[100], int length , string text ) {
 		 cout <<text << "[ ";
-		 for (int o = 0; o < length; o++)
+		 for (string o :Anyarr)
 		 {
-			 cout << Anyarr[o] << " ";
+			 cout << o << " ";
 		 }
 		 cout << " ]" << "\n";
 	 }
