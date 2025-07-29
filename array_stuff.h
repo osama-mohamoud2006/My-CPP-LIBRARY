@@ -158,7 +158,13 @@ using namespace std;
 		 }
 	 }
 
-    
+     void array_filled_with_random( enCharType type ,char Anyarr[100], int length) {
+		 
+		 for (int f = 0; f < length; f++) {
+			 Anyarr[f] = get_random_stuff(type);
+		 }
+	 }
+
 
 
 
@@ -170,7 +176,13 @@ using namespace std;
 			 if (Anyarr[m] > max) max = Anyarr[m];
 		 return max;
 	 }
-
+         // float type
+	    float max_number_in_array(float Anyarr[100], int length){
+		 float max = Anyarr[0];
+		 for (int m = 0; m < length; m++)
+			 if (Anyarr[m] > max) max = Anyarr[m];
+		 return max;
+	  }
 
 	 // get min number in array
 	 int min_number_in_array(int Anyarr[100], int length) {
@@ -179,6 +191,14 @@ using namespace std;
 			 if (Anyarr[m] < min) min = Anyarr[m];
 		 return min;
 	 }
+ 
+	 // float type
+     float min_number_in_array(float Anyarr[100], int length){
+		 float min = Anyarr[0];
+		 for (int m = 0; m < length; m++)
+			 if (Anyarr[m] < min) min = Anyarr[m];
+		 return min;
+	}
 
 	 // is number that provided by user in array?
 	 bool is_number_in_array(int number, int Anyarr[100], int length) {
