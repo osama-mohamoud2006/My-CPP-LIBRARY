@@ -166,7 +166,18 @@ using namespace std;
 	 }
 
 
+    string generate_random_word(enCharType CharType, short Length){
+     
+    string Word;  // Initialize an empty string to build the word.
 
+    // Loop for the number of characters specified by Length.
+    for (int i = 1; i <= Length; i++)
+    {
+        // Append a random character of the specified type to the word.
+        Word = Word + get_random_stuff(CharType);
+    }
+    return Word;
+  }
 
 
 	 //get max number in array 
