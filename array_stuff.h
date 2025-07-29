@@ -105,23 +105,23 @@ using namespace std;
 	 // length is indicating the number of elements you want
 
 	 //fill with random numbers
-	 void array_filled_with_random_numbers(int from, int to, int Anyarr[100], string text, int length) {
-		 cout << text;
+	 void array_filled_with_random(int from, int to, int Anyarr[100],  int length) {
+		 
 		 for (int f = 0; f < length; f++) {
 			 Anyarr[f] = random(from, to);
 		 }
 	 }
  
 	 //fill with random string 
-     void array_filled_with_random_numbers(int from, int to, string Anyarr[100], string text, int length) {
-		 cout << text;
+     void array_filled_with_random(int from, int to, string Anyarr[100], int length) {
+		
 		 for (int f = 0; f < length; f++) {
-			 Anyarr[f] = random(from, to);
+			 Anyarr[f] = to_string(random(from, to));
 		 }
 	 }
 
 	     // fill array with random stuff according to the type you want
-       void array_filled_with_random_numbers( enCharType type ,string Anyarr[100], string text, int length) {
+       void array_filled_with_random( enCharType type ,string Anyarr[100], string text, int length) {
 		 cout << text;
 		 for (int f = 0; f < length; f++) {
 			 Anyarr[f] = get_random_stuff(type);
