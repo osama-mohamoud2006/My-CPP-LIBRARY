@@ -16,9 +16,9 @@ enum enScreen_color { black = 1, red = 2, yellow = 3, green = 4, red_on_black = 
 namespace AllStuff
 {
 
-	// check it is prime or not 
+	// check it is even or odd even return true , odd return false
 	bool even_or_odd(int number) {
-		bool result = false; 
+		bool result ; 
 		 (number % 2 == 0) ? result= true: result= false ;
 		return result;
 	}
