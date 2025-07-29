@@ -165,7 +165,7 @@ using namespace std;
 		 }
 	 }
 
-
+    // generate random word 
     string generate_random_word(enCharType CharType, short Length){
      
     string Word;  // Initialize an empty string to build the word.
@@ -178,7 +178,8 @@ using namespace std;
     }
     return Word;
   }
-
+         
+     
 
 	 //get max number in array 
 	 int max_number_in_array(int Anyarr[100], int length) {
