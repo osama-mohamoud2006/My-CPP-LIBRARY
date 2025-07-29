@@ -18,19 +18,13 @@ using namespace std;
 	
 	 // arrray input for int (oveloading functions)
 	 void array_input(int Anyarr[100], int length) {
-		
-		
 		 for (int i = 0; i < length; i++) {
 			 cout << "enter array element " << i + 1 << " index:" << "[" << i << "]" << " ";
 			 cin >> Anyarr[i];
 		 }
 		 
 	 }
-
-      
 	 void array_input(string Anyarr[100], int length) {
-		
-		
 		 for (int i = 0; i < length; i++) {
 			 cout << "enter array element " << i + 1 << " index:" << "[" << i << "]" << " ";
 			 cin >> Anyarr[i];
@@ -38,8 +32,10 @@ using namespace std;
 		 
 	 }
 
+	 
 
 	 //array ouput 
+
 	 // for int
 	 void array_output(int Anyarr[100], int length , string text ) {
 		 cout <<text << "[ ";
@@ -88,7 +84,11 @@ using namespace std;
 		 length2++;
 		 Anyarr2[length2 - 1] = number;
 	 }
-
+       
+	  void fill_array2(  string word,int Anyarr2[100] , int &length2) {
+		 length2++;
+		 Anyarr2[length2 - 1] = word;
+	 }
 
 
 	 //array filled with random number
