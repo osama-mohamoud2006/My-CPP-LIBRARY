@@ -44,7 +44,7 @@ namespace AllStuff
 
 	
 	// generate random number {
-	int random(int to, int from) {
+	int random(int from, int to) {
 		return rand() %(to - from + 1) + from;
 	}
 
@@ -56,13 +56,17 @@ namespace AllStuff
     switch (CharType)
     {
     case enCharType::smallLetter:
-        return char(random(97, 123)); 
+        return char(random(97, 122)); 
+		break;
     case enCharType::capitalLetter:
-        return char(random(65, 91));  
+        return char(random(65, 90)); 
+		break; 
     case enCharType::specialCharacter:
         return char(random(33, 48));  
+		break;
     case enCharType::digit:
-        return char(random(48, 58));  
+        return char(random(48, 57));  
+		break;
     default:
         return '\0'; 
     }
