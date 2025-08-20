@@ -93,12 +93,16 @@ namespace AllStuff {
 
 	
 	// read full line
-	string read_full_line(string message) {
-		cout << message;
-		string full;
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
-		getline(cin, full);
-		return full;
-	}
+string read_full_line(const string& message) {
+    cout << message;
+    if (cin.peek() == '\n') {
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+
+    string line="";
+    getline(cin, line);
+    return line;
+}
+
 
 }

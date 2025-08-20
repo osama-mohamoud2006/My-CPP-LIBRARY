@@ -167,4 +167,10 @@ The goal is to avoid rewriting the same code over and over, and to keep things m
 * `sum_of_array(float Anyarr[100], int length)`
   Return the sum of float array elements.
 
+* `Upper(string word)`  
+  convert the whole string to Uppercase
+
+* `lower(string word)`
+ convert the whole string to lower
+
 
