@@ -203,7 +203,7 @@ namespace AllStuff
 		return res;
 	}
 
-	//the whole string to upper
+	// the whole string to upper
 	string Upper(string word)
 	{
 		for (int i = 0; i < word.size(); i++)
@@ -214,13 +214,18 @@ namespace AllStuff
 	}
 
 	// the whole string to lower
-	string (string word)
+	string lower(string word)
 	{
 		for (int i = 0; i < word.size(); i++)
 		{
 			word[i] = tolower(word[i]);
 		}
 		return word;
+	}
+
+	char invert(char c)
+	{
+		return islower(c) ? c = toupper(c) : c = tolower(c);
 	}
 
 	void CPlusPlusVersion()
@@ -250,4 +255,3 @@ namespace AllStuff
 	}
 
 }
-lower

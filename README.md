@@ -173,4 +173,7 @@ The goal is to avoid rewriting the same code over and over, and to keep things m
 * `lower(string word)`
  convert the whole string to lower
 
+* `invert(char c)`
+  invert the char 
+
 
