@@ -83,6 +83,37 @@ namespace AllStuff {
 		return number;
 	}
 
+	// enter nunmber in range (overloaded ) 
+	double enter_number_from_to(double from, double to) {
+		bool is_ok = false;
+		double number = 0;
+		do {
+
+			
+			cin >> number;
+			if (cin.fail()) {
+				cin.clear();
+				cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				cout << "\a";
+				system("color 4F"); // red if number isn't in range 
+				cout << "\nplease enter correct number which in range you assigned!\n";
+
+			}
+			else if (from > number || number > to) {
+				cout << "\a";
+				system("color 4F"); // red if number isn't in range 
+				cout << "\nplease enter correct number which in range you assigned!\n";
+			}
+
+			else {
+				is_ok = true;
+			}
+		} while (is_ok == false);
+		system("color 0F"); //rest screen color 
+		return number;
+	}
+
+
 	// read string 
 	string read_string(string message) {
 		cout << message;

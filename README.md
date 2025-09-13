@@ -176,4 +176,9 @@ The goal is to avoid rewriting the same code over and over, and to keep things m
 * `invert(char c)`
   invert the char 
 
+* `CPlusPlusVersion`
+to know your cpp ver
+
+* `SplitString`
+to split string in single words 
 

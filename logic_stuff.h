@@ -1,6 +1,7 @@
 #pragma once
 #include <cmath>
 #include <iostream>
+#include<vector>
 #include <string>
 #include <ctime>
 #include <cstdlib>
@@ -254,4 +255,20 @@ namespace AllStuff
 		}
 	}
 
+}
+
+// split string 
+vector<string> SplitString(string str, string delmi) {
+    vector<string> res;
+    short pos = 0;
+    string sword;
+    while ((pos = str.find(delmi)) != string::npos)
+    {
+        sword = str.substr(0, pos);
+        if (sword != "") res.push_back(sword);
+        str.erase(0, pos + delmi.length());
+    }
+
+    if (str != "") res.push_back(str);
+    return res;
 }
