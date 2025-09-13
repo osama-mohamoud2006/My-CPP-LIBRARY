@@ -256,70 +256,74 @@ namespace AllStuff
 		}
 	}
 
+	// split string into single words 
+	vector<string> SplitString(string str, string delmi) {
+		vector<string> res;
+		short pos = 0;
+		string sword;
+		while ((pos = str.find(delmi)) != string::npos)
+		{
+			sword = str.substr(0, pos);
+			if (sword != "") res.push_back(sword);
+			str.erase(0, pos + delmi.length());
+		}
+
+		if (str != "") res.push_back(str);
+		return res;
+	}
+
+	// to show text when you back to main menu or after function finished
+	void back_to_menu(string TextAppearWhenYouBack = "press any key to back to main menu !") {
+		screen_color(enScreen_color::black);
+		cout << "\033[1;31m";
+		cout << "\n " << TextAppearWhenYouBack << endl;
+		cout << "\033[0m";
+		system("pause>0");
+
+	}
+
+	// tp print the option of menu you enter 
+	void print_menu_option(string option_name) {
+		cout << "\n_________________________________________________\n\n\n";
+		cout << "\t" << option_name << "\n";
+		cout << "\n_________________________________________________\n";
+	}
+
+	//enter yes or not return true if yes 
+	bool EnterY_N() {
+		char c;
+		cin >> c;
+		return (toupper(c) == 'Y'); // return true if it is yes 
+	}
+
+	//change text color 
+	string colorText(const string& text, const string& color, bool background = false) {
+		static unordered_map<string, string> namedColors = {
+			{"black", "0;0;0"}, {"red", "255;0;0"}, {"green", "0;255;0"},
+			{"yellow", "255;255;0"}, {"blue", "0;0;255"}, {"magenta", "255;0;255"},
+			{"cyan", "0;255;255"}, {"white", "255;255;255"},
+			{"gray", "128;128;128"}, {"lightgray", "211;211;211"},
+			{"purple", "128;0;128"}, {"lightpurple", "177;156;217"},
+			{"orange", "255;165;0"}, {"pink", "255;192;203"}
+		};
+
+		string rgb;
+		if (namedColors.count(color)) {
+			rgb = namedColors[color];
+		}
+		else if (color.find(";") != string::npos) {
+			// assume it's "R;G;B"
+			rgb = color;
+		}
+		else {
+
+			return text;
+		}
+
+		string prefix = background ? "48" : "38";
+		return "\033[" + prefix + ";2;" + rgb + "m" + text + "\033[0m";
+	}
+
 }
 
-// split string into single words 
-vector<string> SplitString(string str, string delmi) {
-    vector<string> res;
-    short pos = 0;
-    string sword;
-    while ((pos = str.find(delmi)) != string::npos)
-    {
-        sword = str.substr(0, pos);
-        if (sword != "") res.push_back(sword);
-        str.erase(0, pos + delmi.length());
-    }
 
-    if (str != "") res.push_back(str);
-    return res;
-}
-
-// to show text when you back to main menu or after function finished
-void back_to_menu(string TextAppearWhenYouBack = "press any key to back to main menu !") {
-	screen_color(black);
-	cout << "\033[1;31m";
-	cout << "\n " << TextAppearWhenYouBack << endl;
-	cout << "\033[0m";
-	system("pause>0");
-
-}
-
-// tp print the option of menu you enter 
-void print_menu_option(string option_name) {
-	cout << "\n_________________________________________________\n\n\n";
-	cout << "\t" << option_name << "\n";
-	cout << "\n_________________________________________________\n";
-}
-
-//enter yes or not return true if yes 
-bool EnterY_N() {
-	char c;
-	cin >> c;
-	return (toupper(c) == 'Y'); // return true if it is yes 
-}
-
-//change text color 
-string colorText(const string &text, const string &color, bool background = false) {
-    static unordered_map<string, string> namedColors = {
-        {"black", "0;0;0"}, {"red", "255;0;0"}, {"green", "0;255;0"},
-        {"yellow", "255;255;0"}, {"blue", "0;0;255"}, {"magenta", "255;0;255"},
-        {"cyan", "0;255;255"}, {"white", "255;255;255"},
-        {"gray", "128;128;128"}, {"lightgray", "211;211;211"},
-        {"purple", "128;0;128"}, {"lightpurple", "177;156;217"},
-        {"orange", "255;165;0"}, {"pink", "255;192;203"}
-    };
-
-    string rgb;
-    if (namedColors.count(color)) {
-        rgb = namedColors[color];
-    } else if (color.find(";") != string::npos) {
-        // assume it's "R;G;B"
-        rgb = color;
-    } else {
-       
-        return text;
-    }
-
-    string prefix = background ? "48" : "38"; 
-    return "\033[" + prefix + ";2;" + rgb + "m" + text + "\033[0m";
-}
