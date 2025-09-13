@@ -191,3 +191,5 @@ to show text when you back to main menu or after function finished
 * `EnterY_N()`
 enter yes or not return true if yes
 
+* `colorText()`
+change the text color 

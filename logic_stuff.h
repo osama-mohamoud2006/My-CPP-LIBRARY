@@ -2,6 +2,7 @@
 #include <cmath>
 #include <iostream>
 #include<vector>
+#include <unordered_map>
 #include <string>
 #include <ctime>
 #include <cstdlib>
@@ -297,4 +298,28 @@ bool EnterY_N() {
 	return (toupper(c) == 'Y'); // return true if it is yes 
 }
 
+//change text color 
+string colorText(const string &text, const string &color, bool background = false) {
+    static unordered_map<string, string> namedColors = {
+        {"black", "0;0;0"}, {"red", "255;0;0"}, {"green", "0;255;0"},
+        {"yellow", "255;255;0"}, {"blue", "0;0;255"}, {"magenta", "255;0;255"},
+        {"cyan", "0;255;255"}, {"white", "255;255;255"},
+        {"gray", "128;128;128"}, {"lightgray", "211;211;211"},
+        {"purple", "128;0;128"}, {"lightpurple", "177;156;217"},
+        {"orange", "255;165;0"}, {"pink", "255;192;203"}
+    };
 
+    string rgb;
+    if (namedColors.count(color)) {
+        rgb = namedColors[color];
+    } else if (color.find(";") != string::npos) {
+        // assume it's "R;G;B"
+        rgb = color;
+    } else {
+       
+        return text;
+    }
+
+    string prefix = background ? "48" : "38"; 
+    return "\033[" + prefix + ";2;" + rgb + "m" + text + "\033[0m";
+}
