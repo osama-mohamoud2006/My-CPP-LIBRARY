@@ -182,3 +182,9 @@ to know your cpp ver
 * `SplitString`
 to split string in single words 
 
+* `back_to_menu`
+to show text when you back to main menu or after function finished
+
+* `print_menu_option`
+ to print menu option 
+

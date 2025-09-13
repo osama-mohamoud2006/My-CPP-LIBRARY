@@ -257,7 +257,7 @@ namespace AllStuff
 
 }
 
-// split string 
+// split string into single words 
 vector<string> SplitString(string str, string delmi) {
     vector<string> res;
     short pos = 0;
@@ -272,3 +272,22 @@ vector<string> SplitString(string str, string delmi) {
     if (str != "") res.push_back(str);
     return res;
 }
+
+// to show text when you back to main menu or after function finished
+void back_to_menu(string TextAppearWhenYouBack = "press any key to back to main menu !") {
+	screen_color(black);
+	cout << "\033[1;31m";
+	cout << "\n " << TextAppearWhenYouBack << endl;
+	cout << "\033[0m";
+	system("pause>0");
+
+}
+
+// tp print the option of menu you enter 
+void print_menu_option(string option_name) {
+	cout << "\n_________________________________________________\n\n\n";
+	cout << "\t" << option_name << "\n";
+	cout << "\n_________________________________________________\n";
+}
+
+
