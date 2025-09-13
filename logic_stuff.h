@@ -290,4 +290,11 @@ void print_menu_option(string option_name) {
 	cout << "\n_________________________________________________\n";
 }
 
+//enter yes or not return true if yes 
+bool EnterY_N() {
+	char c;
+	cin >> c;
+	return (toupper(c) == 'Y'); // return true if it is yes 
+}
+
 
